@@ -93,7 +93,7 @@ for i in mpf.available_styles():
 '''
 #%%
 
-# plotly 動態圖（較為複雜，提供三種寫法）
+# plotly 動態圖（較為複雜，尚未完全做完）
 # https://pse.is/3f6dsl
 # 移除缺少時間：https://pse.is/3e4p7z
 # 增加交易量圖：
@@ -146,7 +146,6 @@ plotly.offline.plot(fig3, filename = path + 'Future_1day.html', auto_open = Fals
 import cufflinks as cf
 import plotly
 
-
 quant_fig = cf.QuantFig(df_1hr, title='Future - 1 hour', legend='top', name='Price')
 quant_fig.add_bollinger_bands()
 quant_fig.add_sma([10,20],width=2,color=['green','lightgreen'],legendgroup=True)
@@ -173,5 +172,8 @@ plotly.offline.plot(fig, filename = path + "Fut_iplot.html", auto_open=False)
 # 雖然可以清除空值，但是會讓圖變得很奇怪（所以我的 plotly 成交量也才畫這麼不順）
 # 解決方法應該是要去研究 layout 或是 go.Figure() 裡的參數
 
-
+'''
+之後有時間再研究完動態圖的兩種寫法！暫時告一段落
+可先用靜態圖完整呈現！
+'''
 
